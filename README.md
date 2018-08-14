@@ -1,4 +1,4 @@
-# Smart Bank
+# <img src="./src/assets/LogoMakr_7TyJtZ.png" alt="logo" width="40px"/> Smart Bank
 
 *A smart-contract based wallet for everyone!*
 
@@ -31,9 +31,13 @@ We, of course would like to add something more on top of  existing multisig wall
 2. **Recovery accounts** - accounts which can only be used for recovery help or inheritance.
 3. **Sub-accounts** - being able to internally divide assets into separate "accounts" with different rules. For instance, keep your savings untouchable with a delayed lock, while leaving some spending money in a different sub-account with a daily allowance.
     * Sub accounts should also have the option of "external spenders" - non-owner accounts which can spend the daily limits (e.g. you can make an account for a family member/ friend)
+    * Withdrawal limits should either be daily or monthly
 4. **USD equivalent limits** - users should be able to set a single daily limit per sub-account in USD. Withdrawing any ETH or ERC20 tokens should be reflected on the allowance depending on the price of the given asset at the time of withdrawal. There will probably be a list of supported tokens, and all others will need to have a specific allowance set.
 5. **An intuitive UI** - ideally something like the new Ledger app, which can show your assets as a portfolio. It should also be possible to see all transactions, sub-accounts, limits, etc. There should be an easy interface for withdrawing within the daily limit, and another interface for "advanced" transactions outside the limits (multisig transactions). Any settings changes will also require multisig transactions.
-6. *Automatic loans from locked accounts* * - This is a feature which would be nice to have in the future - being able to lock up your long-term assets as collateral for MakerDAO CDPs and getting a loan in Dai.
+6. *Delayed changes* - ideally, any multisig change of settings or approval of a transaction should have some delay implemented, such that it can be revoked. Even if all required accounts approve a transaction, it should be possible to reject it before it can be executed. If someone steals two of your wallets somehow and is able to do multisig transactions, you should still be able to reject them until you get a hold of your recovery partners. *(nice to have)*
+7. *Automatic split of deposits among sub-accounts* - you should be able to deposit and automatically split funds - e.g. 10% goes to your retirement account, 30% goes to your Lambo savings, 60% goes to your expenses account. *(nice to have)*
+8. *Automatic loans from locked accounts* - This is a feature which would be *nice to have* in the future - being able to lock up your long-term assets as collateral for MakerDAO CDPs and getting a loan in Dai. *(nice to have)*
+9. *Address book* - Being able to resolve ENS addresses and assign custom names to any address *(nice to have)*
 
 ---
 
@@ -43,7 +47,7 @@ All contracts are WITHOUT ANY WARRANTY; without even the implied warranty of MER
 
 ## License
 
-All smart contracts are released under LGPL v.3.
+All code is released under LGPL v.3.
 
 ## Contributors
 
