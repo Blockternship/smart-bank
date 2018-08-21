@@ -1,2 +1,5 @@
 build/contracts/
-node_modules/
+node_modules
+.next
+yarn.lock
+package-lock.json

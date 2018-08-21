@@ -41,6 +41,16 @@ We, of course would like to add something more on top of  existing multisig wall
 
 ---
 
+## Workflow
+
+### Development
+
+Just run this command `npm run dev` and then go to `http://localhost:3000`.
+
+### Production
+
+Install now-cli with `npm install -g now`. You can then use `now` command in the repository to deploy.
+
 ## Legal Stuff
 
 All contracts are WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
