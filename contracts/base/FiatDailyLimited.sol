@@ -5,7 +5,7 @@ import "../PriceAggregator.sol";
 
 /// @title Fiat Daily Limited - Based on DailyLimitModule.sol. This will allow to limit withdrawals of any asset based on a global daily limit set in USD (for instance). The amount withdrawn will depend on the USD value of each individual asset.
 /// @author Paskal S
-/// TODO: Implement changes to accomodate functionality
+/// TODO: Implement changes to accomodate functionality. A list of supported assets is needed, the rest will require manual limits
 contract FiatDailyLimited {
 
     // dailyLimits mapping maps token address to daily limit settings.

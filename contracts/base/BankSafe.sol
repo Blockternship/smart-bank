@@ -22,13 +22,13 @@ contract BankSafe is OwnerManager, RecoveryManager, AccountManager {
     /// @param _threshold Number of required confirmations for a Safe transaction.
     /// @param to Contract address for optional delegate call.
     /// @param data Data payload for optional delegate call.
-    function setup(address[] _owners, uint256 _threshold, address to, bytes data)
+    function setup(address[] _owners, uint _threshold, bytes32[] _accountNames)
         public
     {
         require(domainSeperator == 0, "Domain Seperator already set!");
         domainSeperator = keccak256(abi.encode(DOMAIN_SEPERATOR_TYPEHASH, this));
         setupOwners(_owners, _threshold);
-        // As setupOwners can only be called if the contract has not been initialized we don't need a check for setupModules
-        setupModules(to, data);
+        setupRecovery(_friends, _friendsThreshold);// Should be optional but highly encouraged. Do the setup somewhere else
+        setupAccounts(_accountNames);
     }
 }
