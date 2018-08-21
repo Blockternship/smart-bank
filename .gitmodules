@@ -1,3 +1,6 @@
 [submodule "contracts/accounting"]
 	path = contracts/accounting
 	url = https://github.com/paradoxDAO/accounting.git
+[submodule "contracts/base/safe-contracts"]
+	path = contracts/base/safe-contracts
+	url = https://github.com/gnosis/safe-contracts.git
