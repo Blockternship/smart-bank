@@ -12,6 +12,7 @@ import {
   alignItems,
   justifyContent,
   borders,
+  maxWidth,
 } from 'styled-system'
 
 export default styled.div`
@@ -27,4 +28,5 @@ export default styled.div`
   ${alignItems}
   ${justifyContent}
   ${borders}
+  ${maxWidth}
 `
