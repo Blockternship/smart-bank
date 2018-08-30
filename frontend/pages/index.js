@@ -11,9 +11,14 @@ import Text from '../components/Text'
 
 import accounts from '../data/accounts'
 
-const items = accounts.map(account => (
-  <Box>
-    <Text>{account.title}</Text>
+const items = accounts.map(({ title, value, valuta }) => (
+  <Box mt={2} display="flex" justifyContent="space-between">
+    <Text fontSize="16px" fontWeight="500">
+      {title}
+    </Text>
+    <Text fontSize="16px" fontWeight="500">
+      {new Intl.NumberFormat('en-US').format(value) + ' ' + valuta}
+    </Text>
   </Box>
 ))
 
@@ -26,17 +31,29 @@ export default class App extends Component {
     return (
       <div>
         <Navbar activeIndex={0} />
-        <Layout display="flex" justifyContent="center">
+        <Box
+          m="1rem auto"
+          maxWidth="48em"
+          display="flex"
+          justifyContent="center"
+          flexDirection="column"
+        >
           <Card
             display="flex"
             flexWrap="wrap"
             flexDirection="column"
             p={3}
-            mt={3}
+            mt={2}
+            width="100%"
           >
-            <Text fontSize="20px" fontWeight="500">
-              Accounts
-            </Text>
+            <Box display="flex" justifyContent="space-between">
+              <Text fontSize="20px" fontWeight="700">
+                My accounts
+              </Text>
+              <Text fontSize="20px" fontWeight="700">
+                Value
+              </Text>
+            </Box>
             <Trail
               native
               from={{ opacity: 0 }}
@@ -48,7 +65,7 @@ export default class App extends Component {
               ))}
             </Trail>
           </Card>
-        </Layout>
+        </Box>
       </div>
     )
   }
